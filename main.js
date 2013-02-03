@@ -1,5 +1,6 @@
 var $ = require('jquery')
 var Backbone = require('backbone')
+var _ = require('underscore')
 var heredoc = require('heredoc')
 Backbone.$ = $
 
@@ -29,13 +30,10 @@ editor = new Backbone.Model({
   code: code
 })
 
-editor.on('change:code', run)
-state.on('change add', run)
 
-function run() {
+var run = _.throttle(function () {
   var stateObj = makeStateObj(state)
   var src = editor.get('code')
-  console.log(stateObj, src)
   try{
     var res = logica.exec(src, stateObj)
     console.log('yep', res)
@@ -50,8 +48,10 @@ function run() {
       error: e
     })
   }
-}
+}, 250)
 
+editor.on('change:code', run)
+state.on('change add', run)
 run()
 
 function makeStateObj(stateCollection) {
