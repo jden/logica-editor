@@ -1,0 +1,46 @@
+h1{
+  background-color: #000;
+  color: #eee;
+  font-weight: normal;
+  line-height: 50px;
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+#state h2{
+  display: inline-block;
+}
+#state a{
+  font-size: 24px;
+  margin-left: 1em;
+}
+
+#editor h2{
+  display: inline-block;
+}
+#result{
+  display: inline-block;
+  margin-left: 1em;
+  font-size: 24px;
+}
+#editor .CodeMirror{
+  font-size: 16px;
+}
+
+#editor #result span{
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+#editor #result .true{
+  color: #18a011;
+}
+
+#editor #result .false{
+  color: #da3e5a;
+}
+
+#editor #result .error{
+  color: #db3;
+}
