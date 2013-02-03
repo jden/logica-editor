@@ -52,6 +52,9 @@ h1{
 .item input[name="value"].invalid + span::after{
   content: '*';
   font-weight: bold;
-  font-size: 16px;
+  font-size: 24px;
   color: #da3e5a;
+}
+.item input{
+  width: 90%;
 }

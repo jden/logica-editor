@@ -52,6 +52,10 @@ var ItemView = Backbone.View.extend({
     this.$el.html(template(this.model.toJSON()))
     var self = this;
 
+    this.model.on('change:type', function(model) {
+      validate.call(self, model.get('value'))
+    })
+    window.x = this.model
     this.model.on('change:valid', function (m, valid) {
       console.log('valid', m, valid)
       self.$('input[name="value"]').toggleClass('invalid', !valid)
@@ -60,7 +64,7 @@ var ItemView = Backbone.View.extend({
   },
   bindings: {
     'value input[name="key"]': 'key',
-    'value input[name="type"]': 'type',
+    'value select[name="type"]': 'type',
     'value input[name="value"]': ['value', [validate, validate]]
   }
 })
