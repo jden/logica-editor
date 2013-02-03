@@ -42,7 +42,7 @@ var run = _.throttle(function () {
       error: null
     })
   } catch (e) {
-    console.log('nope', e)
+    console.log('nope', e.message)
     editor.set({
       result: null,
       error: e

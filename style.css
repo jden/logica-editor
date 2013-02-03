@@ -19,8 +19,7 @@ h1{
   display: inline-block;
 }
 #result{
-  display: inline-block;
-  margin-left: 1em;
+  margin-top: 10px;
   font-size: 24px;
 }
 #editor .CodeMirror{
@@ -43,4 +42,16 @@ h1{
 
 #editor #result .error{
   color: #db3;
+}
+
+.item input[name="value"] + span{
+  width: 10px;
+  display: inline-block;
+}
+
+.item input[name="value"].invalid + span::after{
+  content: '*';
+  font-weight: bold;
+  font-size: 16px;
+  color: #da3e5a;
 }

@@ -1,12 +1,15 @@
-<li>
-<input type="text" value="<%= key %>" placeholder="name">
-
-<select>
-<option>String</option>
-<option>Number</option>
-<option>Boolean</option>
-</select>
-
-<input type="text" value="<%= value %>" placeholder="value">
-
-</li>
+@!(item)
+<td>
+  <input name="key" type="text" value="@item.key" placeholder="name">
+</td>
+<td>
+  <select name="type">
+    <option @if(item.type === 'String'){ selected }>String</option>
+    <option @if(item.type === 'Number'){ selected }>Number</option>
+    <option @if(item.type === 'Boolean'){ selected }>Boolean</option>
+  </select>
+</td>
+<td>
+  <input name="value" type="text" value="@item.value" placeholder="value">
+  <span class="validation"></span>
+</td>

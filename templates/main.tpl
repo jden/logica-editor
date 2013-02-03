@@ -1,2 +1,4 @@
 <h1>logica editor</h1>
-<div id="container" class="fivesixth center"></div>
+<div class="row">
+<div id="container" class="fivesixth centered"></div>
+</div>
