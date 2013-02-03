@@ -18,12 +18,14 @@ var state = new StateCollection([
 
 var code = heredoc(function(){/*
 # a logica program
+
 (AND
-  (= foo 'baz')
+  (foo = 'baz')
   faa
   (NOT (NOT true))
-  (>= pizzas 23)
+  (pizzas >= 23)
 )
+
 
 */})
 
