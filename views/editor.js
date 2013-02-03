@@ -2,6 +2,7 @@ var Backbone = require('backbone')
 var _ = require('underscore')
 var template = require('../templates/editor.tpl')
 var resultTemplate = require('../templates/result.tpl')
+require('../codemirror.logica')
 
 var EditorView = Backbone.View.extend({
   initialize: function (init) {

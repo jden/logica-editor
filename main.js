@@ -17,6 +17,7 @@ var state = new StateCollection([
 ])
 
 var code = heredoc(function(){/*
+# a logica program
 (AND
   (= foo 'baz')
   faa
@@ -42,7 +43,6 @@ var run = _.throttle(function () {
       error: null
     })
   } catch (e) {
-    console.log('nope', e.message)
     editor.set({
       result: null,
       error: e
