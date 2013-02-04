@@ -7,7 +7,7 @@ work in progress.
 
     $ npm start
 
-    then open index.html in a browser
+then open index.html in a browser
 
 ## license
 
