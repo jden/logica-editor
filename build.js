@@ -4,6 +4,11 @@ var fs = require('fs')
 
 var watch = process.argv.indexOf('-w') !== -1
 
+// ensure jquery-browserify is renamed to jquery :/
+try {
+fs.renameSync(__dirname + '/node_modules/jquery-browserify', __dirname + '/node_modules/jquery')
+} catch (e) {}
+
 var bundle = browserify({watch: watch, debug: true})
     .use(compileTemplates)
     .addEntry('main.js');
