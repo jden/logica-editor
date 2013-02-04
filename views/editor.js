@@ -19,10 +19,11 @@ var EditorView = Backbone.View.extend({
         lineNumbers: true,
         indentUnit: 2,
         tabSize: 2,
-        onChange: function(cm) {
-          self.model.set({code: cm.getValue()})
-        }
       });
+
+      cm.on('change', function() {
+        self.model.set({code: cm.getValue()})
+      })
     })
 
     this.model.on('change:result', this.render)

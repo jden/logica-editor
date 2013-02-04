@@ -13,7 +13,9 @@ var MainView = require('./views/main')
 var state = new StateCollection([
   {key: 'foo', type: 'String', value: 'baz'},
   {key: 'faa', type: 'Boolean', value: true},
-  {key: 'pizzas', type: 'Number', value: 23}
+  {key: 'pizzas', type: 'Number', value: 23},
+  {key: 'toppings', type: 'List', value: 'cheese, pepperoni, bellPeppers, olives'},
+  {key: 'bar', type: 'String', value: 'baz'}
 ])
 
 var code = heredoc(function(){/*
@@ -23,7 +25,11 @@ var code = heredoc(function(){/*
   (foo = 'baz')
   faa
   (NOT (NOT true))
+
+  #hella za
   (pizzas >= 23)
+  ('cheese' IN toppings)
+  (and (foo = bar))
 )
 
 

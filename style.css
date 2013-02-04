@@ -58,3 +58,8 @@ h1{
 .item input{
   width: 90%;
 }
+
+/* code mirror styles */
+div.CodeMirror span.CodeMirror-matchingbracket {
+color: #001EFF;
+}

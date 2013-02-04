@@ -7,6 +7,7 @@
     <option @if(item.type === 'String'){ selected }>String</option>
     <option @if(item.type === 'Number'){ selected }>Number</option>
     <option @if(item.type === 'Boolean'){ selected }>Boolean</option>
+    <option @if(item.type === 'List'){ selected }>List</option>
   </select>
 </td>
 <td>
